@@ -20,6 +20,14 @@ var api = new ParseServer({
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
+  oauth: {
+   //twitter: {
+   //  consumer_key: "", // REQUIRED
+   //  consumer_secret: "" // REQUIRED
+   //},
+   facebook: {
+    }
+  }
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
@@ -36,7 +44,7 @@ app.use(mountPath, api);
 
 // Parse Server plays nicely with the rest of your web routes
 app.get('/', function(req, res) {
-  res.status(200).send('Make sure to star the parse-server repo on GitHub!');
+  res.status(200).send('We have a lift off!');
 });
 
 // There will be a test page available on the /test path of your server url
