@@ -26,6 +26,7 @@ var api = new ParseServer({
    //  consumer_secret: "" // REQUIRED
    //},
    facebook: {
+     appIds: process.env.FACEBOOK_APP || 'WillyIsGay'
     }
   }
 });
